@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive, dependency-free Image Slider Library built with HTML5, CSS3, and modern Vanilla JavaScript ES6+.">
+  <title>Image Slider Library</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="slider.js" defer></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header Section -->
+    <header class="page-header">
+      <span class="badge">CSE 230 – Web Design and Development</span>
+      <h1>Image Slider Library</h1>
+      <p class="subtitle">
+        A lightweight, modular, and accessible carousel engineered from first principles with HTML5, CSS3, and Vanilla JavaScript ES6+.
+      </p>
+      <div class="meta-tag">
+        <span><strong>Student:</strong> Sujata Woad</span>
+        <span class="divider">•</span>
+        <span><strong>Professor:</strong> Professor Chaudhary</span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+      <section class="gallery-section" aria-label="Image Slider Section">
+        <!-- Slider Container -->
+        <div class="slider" id="image-slider"
+             role="region"
+             aria-roledescription="carousel"
+             aria-label="Scenic Nature Landscapes"
+             tabindex="0">
+
+          <!-- Viewport (overflow: hidden) -->
+          <div class="slider-viewport">
+            <!-- Sliding Track (flex layout, transform: translateX) -->
+            <div class="slider-track" id="slider-track">
+
+              <!-- Slide 1 -->
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=80"
+                     alt="Serene alpine lake reflecting towering mountain peaks under clear skies">
+                <figcaption>
+                  <span class="caption-tag">Landscape</span>
+                  <h3>Mountain Escape</h3>
+                  <p>Reflective waters cradled beneath sunlit alpine peaks.</p>
+                </figcaption>
+              </figure>
+
+              <!-- Slide 2 -->
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80"
+                     alt="Vast open green landscape and rolling hills beneath an expansive horizon">
+                <figcaption>
+                  <span class="caption-tag">Exploration</span>
+                  <h3>Open Horizons</h3>
+                  <p>Endless rolling valleys stretched beneath the morning atmosphere.</p>
+                </figcaption>
+              </figure>
+
+              <!-- Slide 3 -->
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80"
+                     alt="Warm sunlight streaming through lush green trees in a dense forest">
+                <figcaption>
+                  <span class="caption-tag">Nature</span>
+                  <h3>Into the Forest</h3>
+                  <p>Golden rays piercing through ancient evergreen canopy.</p>
+                </figcaption>
+              </figure>
+
+              <!-- Slide 4 -->
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80"
+                     alt="Gentle turquoise ocean waves washing ashore on a tropical sandy beach">
+                <figcaption>
+                  <span class="caption-tag">Coastline</span>
+                  <h3>Coastal Calm</h3>
+                  <p>Crystalline turquoise waves brushing gently against warm sands.</p>
+                </figcaption>
+              </figure>
+
+              <!-- Slide 5 -->
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=80"
+                     alt="Majestic snow-capped mountain peak standing under a vibrant night sky filled with stars">
+                <figcaption>
+                  <span class="caption-tag">Night Sky</span>
+                  <h3>Alpine Summit</h3>
+                  <p>Snowy summits reaching towards a brilliant galaxy of stars.</p>
+                </figcaption>
+              </figure>
+
+            </div>
+          </div>
+
+          <!-- Left Navigation Control -->
+          <button class="slider-arrow prev" id="prev-btn"
+                  type="button"
+                  aria-label="Previous slide">
+            <span aria-hidden="true">&#10094;</span>
+          </button>
+
+          <!-- Right Navigation Control -->
+          <button class="slider-arrow next" id="next-btn"
+                  type="button"
+                  aria-label="Next slide">
+            <span aria-hidden="true">&#10095;</span>
+          </button>
+        </div>
+
+        <!-- Slider Controls Footer -->
+        <div class="slider-footer">
+          <div class="slider-status">
+            <span id="slide-counter" class="slide-counter" aria-live="polite">01 / 05</span>
+            <button class="slider-autoplay-btn" id="slider-autoplay-btn"
+                    type="button"
+                    aria-label="Pause automatic slide transitions"
+                    aria-pressed="false"
+                    title="Pause / Resume autoplay">
+              <span class="autoplay-icon" aria-hidden="true">&#10074;&#10074;</span>
+              <span class="autoplay-text">Pause</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Indicator Dots (Generated automatically by JavaScript) -->
+          <div class="slider-dots" id="slider-dots"
+               role="tablist"
+               aria-label="Slide selector dots"></div>
+        </div>
+      </section>
+
+      <!-- Architecture & Feature Highlights -->
+      <section class="features-grid" aria-label="Key Architecture Features">
+        <article class="feature-card">
+          <div class="feature-icon">&#9881;</div>
+          <h4>Zero Dependencies</h4>
+          <p>Engineered with 100% pure HTML5, CSS3, and ES6+ JavaScript. No jQuery, Bootstrap, or external libraries.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">&#128640;</div>
+          <h4>Hardware Accelerated</h4>
+          <p>Utilizes CSS <code>transform: translateX()</code> and <code>will-change</code> for smooth 60fps animations.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">&#8734;</div>
+          <h4>Seamless Infinite Loop</h4>
+          <p>Uses clone-based boundary nodes to transition smoothly from last to first slide with zero visual jumping.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">&#128241;</div>
+          <h4>Responsive & Touch-Ready</h4>
+          <p>Fully adaptive across mobile, tablet, and desktop screens with built-in swipe and keyboard arrow support.</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+      <p>
+        <strong>Image Slider Library</strong> — Course Project for CSE 230: Web Design and Development
+      </p>
+      <p class="copyright">
+        Built by Sujata Woad • Evaluated by Professor Chaudhary • International American University (IAU)
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
